@@ -4,124 +4,33 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Japanese Restaurant</title>
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="custom.css">
 
-	<!--Font Awesome JS-->
-	<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" defer></script>
+
+	<script src="allFoodList.js" defer></script>
+	<script src="foodMenuData.js" defer></script>
+	<script src="index.js" defer></script>
+
+	
 </head>
 <body id="body" class="sky-blue">
 	<!--Top navbar-->
 	<nav class="navbar fixed-top navbar-dark navy-blue">
 		<div class="container-fluid">
-			<a type="button" class="btn text-white" href="#"><i class="fas fa-utensils"></i> Menu</a>
-			<a type="button" class="btn text-white" href="#"><i class="fas fa-shopping-cart"></i> Orders</a>
+			<a type="button" class="btn text-white" onclick="renderFoodMenu()"><i class="fas fa-utensils"></i> Menu</a>
+			<a type="button" class="btn text-white" ><i class="fas fa-shopping-cart"></i> Orders</a>
 		</div>
 	</nav>
 	<!--Line Seperator (start)-->
 	<hr class="mx-2" style="margin-top: 2rem;">
 
-	<!--Food items dynamically rendered here-->
-	<div class="row mx-0 g-3 my-0">
-		<div class="col-6">
-			<div class="card">
-				<div class="card-body">
-					<h5 class="card-title text-center">Sushi</h5>
-					<img src="https://via.placeholder.com/200" class="rounded img-fluid mx-auto d-block">
-					<div class="hstack gap-2 my-3">
-						<button class="btn btn-primary"><i class="fas fa-minus"></i></button>
-						<input class="form-control" type="text" disabled placeholder="0">
-						<button class="btn btn-primary"><i class="fas fa-plus"></i></button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-6">
-			<div class="card">
-				<div class="card-body">
-					<h5 class="card-title text-center">Sashimi</h5>
-					<img src="https://via.placeholder.com/200" class="rounded img-fluid mx-auto d-block">
-					<div class="hstack gap-2 my-3">
-						<button class="btn btn-primary"><i class="fas fa-minus"></i></button>
-						<input class="form-control" type="text" disabled placeholder="0">
-						<button class="btn btn-primary"><i class="fas fa-plus"></i></button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row mx-0 g-3 my-0">
-		<div class="col-6">
-			<div class="card">
-				<div class="card-body">
-					<h5 class="card-title text-center">Sushi</h5>
-					<img src="https://via.placeholder.com/200" class="rounded img-fluid mx-auto d-block">
-					<div class="hstack gap-2 my-3">
-						<button class="btn btn-primary"><i class="fas fa-minus"></i></button>
-						<input class="form-control" type="text" disabled placeholder="0">
-						<button class="btn btn-primary"><i class="fas fa-plus"></i></button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-6">
-			<div class="card">
-				<div class="card-body">
-					<h5 class="card-title text-center">Sashimi</h5>
-					<img src="https://via.placeholder.com/200" class="rounded img-fluid mx-auto d-block">
-					<div class="hstack gap-2 my-3">
-						<button class="btn btn-primary"><i class="fas fa-minus"></i></button>
-						<input class="form-control" type="text" disabled placeholder="0">
-						<button class="btn btn-primary"><i class="fas fa-plus"></i></button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row mx-0 g-3 my-0">
-		<div class="col-6">
-			<div class="card">
-				<div class="card-body">
-					<h5 class="card-title text-center">Sushi</h5>
-					<img src="https://via.placeholder.com/200" class="rounded img-fluid mx-auto d-block">
-					<div class="hstack gap-2 my-3">
-						<button class="btn btn-primary"><i class="fas fa-minus"></i></button>
-						<input class="form-control" type="text" disabled placeholder="0">
-						<button class="btn btn-primary"><i class="fas fa-plus"></i></button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-6">
-			<div class="card">
-				<div class="card-body">
-					<h5 class="card-title text-center">Sashimi</h5>
-					<img src="https://via.placeholder.com/200" class="rounded img-fluid mx-auto d-block">
-					<div class="hstack gap-2 my-3">
-						<button class="btn btn-primary"><i class="fas fa-minus"></i></button>
-						<input class="form-control" type="text" disabled placeholder="0">
-						<button class="btn btn-primary"><i class="fas fa-plus"></i></button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!--Line Seperator (end)-->
-	<hr class="mx-2" style="margin-bottom: 5rem;">
-
-	<!--Bottom navbar-->
-	<nav class="navbar fixed-bottom navbar-light sky-blue mt-5">
-		<div class="container-fluid">
-			<button type="button" class="btn btn-lg btn-success d-block mx-auto">Confirm Order</button>
-		</div>
-	</nav>
-	
+	<!--Dynamically render content here-->
+	<main id="main-content"></main>
 	
 </body>
 </html>
