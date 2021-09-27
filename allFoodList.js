@@ -2,264 +2,276 @@ let AllFoodList = [
   //Promotions
   [
     {
-      FoodPicture: "200.png",
-      FoodName: "Promo 1",
-      FoodPrice: 14.0,
+      FoodPicture: "images/Promotions/P1.jpg",
+      FoodName: "Salmon Belly (2 Fillets)",
+      FoodPrice: 18.5,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Promo 2",
-      FoodPrice: 4.2,
+      FoodPicture: "images/Promotions/P2.jpg",
+      FoodName: "Salmon Belly (18pcs)",
+      FoodPrice: 25.8,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Promo 3",
-      FoodPrice: 6.9,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Promo 4",
-      FoodPrice: 7.2,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Promo 5",
-      FoodPrice: 8.5,
+      FoodPicture: "images/Promotions/P3.jpg",
+      FoodName: "Salmon Bundle Pack",
+      FoodPrice: 31.0,
     },
   ],
 
   //Kid's Meal
   [
     {
-      FoodPicture: "200.png",
-      FoodName: "Kid's Meal 1",
-      FoodPrice: 14.0,
+      FoodPicture: "images/KidsMeal/KM1.jpg",
+      FoodName: "Starry Delight Bento",
+      FoodPrice: 7.9,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Kid's Meal 2",
-      FoodPrice: 4.2,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Kid's Meal 3",
-      FoodPrice: 6.9,
+      FoodPicture: "images/KidsMeal/KM2.jpg",
+      FoodName: "Rainbow Sushi Bento",
+      FoodPrice: 7.9,
     },
   ],
 
   //Sushi Platters
   [
     {
-      FoodPicture: "200.png",
-      FoodName: "Sushi Platter 1",
-      FoodPrice: 14.0,
+      FoodPicture: "images/SushiPlatters/SP1.jpg",
+      FoodName: "Classic Set A",
+      FoodPrice: 10.9,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Sushi Platter 2",
-      FoodPrice: 4.2,
+      FoodPicture: "images/SushiPlatters/SP2.jpg",
+      FoodName: "Classic Set B",
+      FoodPrice: 13.9,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Sushi Platter 3",
-      FoodPrice: 6.9,
+      FoodPicture: "images/SushiPlatters/SP3.jpg",
+      FoodName: "Classic Set C",
+      FoodPrice: 16.9,
+    },
+
+    {
+      FoodPicture: "images/SushiPlatters/SP4.jpg",
+      FoodName: "Special Set A",
+      FoodPrice: 19.9,
+    },
+
+    {
+      FoodPicture: "images/SushiPlatters/SP5.jpg",
+      FoodName: "Special Set B",
+      FoodPrice: 15.9,
+    },
+
+    {
+      FoodPicture: "images/SushiPlatters/SP6.jpg",
+      FoodName: "Special Set C",
+      FoodPrice: 24.9,
+    },
+
+    {
+      FoodPicture: "images/SushiPlatters/SP7.jpg",
+      FoodName: "Genki Set A",
+      FoodPrice: 55.9,
+    },
+
+    {
+      FoodPicture: "images/SushiPlatters/SP8.jpg",
+      FoodName: "Genki Set B",
+      FoodPrice: 56.9,
     },
   ],
 
-  //Curry Rice
+  //Bento
   [
     {
-      FoodPicture: "200.png",
-      FoodName: "Curry Rice 1",
-      FoodPrice: 14.0,
+      FoodPicture: "images/Bento/BT1.jpg",
+      FoodName: "Teriyaki Chicken & Ebi Soba Bento",
+      FoodPrice: 12.9,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Curry Rice 2",
-      FoodPrice: 4.2,
+      FoodPicture: "images/Bento/BT2.jpg",
+      FoodName: "Teriyaki Chicken & Ebi Bento",
+      FoodPrice: 12.9,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Curry Rice 3",
-      FoodPrice: 6.9,
-    },
-  ],
-
-  //Teishoku
-  [
-    {
-      FoodPicture: "200.png",
-      FoodName: "Teishoku 1",
-      FoodPrice: 14.0,
+      FoodPicture: "images/Bento/BT3.jpg",
+      FoodName: "Beef & Chicken Bento",
+      FoodPrice: 14.5,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Teishoku 2",
-      FoodPrice: 4.2,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Teishoku 3",
-      FoodPrice: 6.9,
+      FoodPicture: "images/Bento/BT4.jpg",
+      FoodName: "Unagi & Ebi Bento",
+      FoodPrice: 16.5,
     },
   ],
 
   //Donburi
   [
     {
-      FoodPicture: "200.png",
-      FoodName: "Donburi 1",
-      FoodPrice: 14.0,
+      FoodPicture: "images/Donburi/DB1.jpg",
+      FoodName: "Spicy Salmon & Engawa Don",
+      FoodPrice: 6.5,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Donburi 2",
-      FoodPrice: 4.2,
+      FoodPicture: "images/Donburi/DB2.jpg",
+      FoodName: "Mala Beef Don",
+      FoodPrice: 11.6,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Donburi 3",
-      FoodPrice: 6.9,
-    },
-  ],
-
-  //Salad
-  [
-    {
-      FoodPicture: "200.png",
-      FoodName: "Salad 1",
-      FoodPrice: 14.0,
+      FoodPicture: "images/Donburi/DB3.jpg",
+      FoodName: "Mini Chirashi Don",
+      FoodPrice: 6.5,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Salad 2",
-      FoodPrice: 4.2,
+      FoodPicture: "images/Donburi/DB4.jpg",
+      FoodName: "Mini Salmon Ikura Don",
+      FoodPrice: 6.5,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Salad 3",
-      FoodPrice: 6.9,
+      FoodPicture: "images/Donburi/DB5.jpg",
+      FoodName: "Mini Salmon Avo Mentai Don",
+      FoodPrice: 6.5,
+    },
+
+    {
+      FoodPicture: "images/Donburi/DB6.jpg",
+      FoodName: "White Rice",
+      FoodPrice: 1.8,
     },
   ],
 
-  //Ramen
+  //Noodles
   [
     {
-      FoodPicture: "200.png",
-      FoodName: "Ramen 1",
-      FoodPrice: 14.0,
+      FoodPicture: "images/Noodles/ND1.jpg",
+      FoodName: "Ebi Tempura Udon",
+      FoodPrice: 8.5,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Ramen 2",
-      FoodPrice: 4.2,
+      FoodPicture: "images/Noodles/ND2.jpg",
+      FoodName: "Beef Udon",
+      FoodPrice: 8.5,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Ramen 3",
-      FoodPrice: 6.9,
-    },
-  ],
-
-  //Udon
-  [
-    {
-      FoodPicture: "200.png",
-      FoodName: "Udon 1",
-      FoodPrice: 14.0,
+      FoodPicture: "images/Noodles/ND3.jpg",
+      FoodName: "Kitsune Udon",
+      FoodPrice: 6.2,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Udon 2",
-      FoodPrice: 4.2,
+      FoodPicture: "images/Noodles/ND4.jpg",
+      FoodName: "Kake Udon",
+      FoodPrice: 5.5,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Udon 3",
-      FoodPrice: 6.9,
-    },
-  ],
-
-  //Yakimono
-  [
-    {
-      FoodPicture: "200.png",
-      FoodName: "Yakimono 1",
-      FoodPrice: 14.0,
+      FoodPicture: "images/Noodles/ND5.jpg",
+      FoodName: "Maze Soba",
+      FoodPrice: 6.2,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Yakimono 2",
-      FoodPrice: 4.2,
+      FoodPicture: "images/Noodles/ND6.jpg",
+      FoodName: "Zaru Soba",
+      FoodPrice: 4.8,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Yakimono 3",
-      FoodPrice: 6.9,
+      FoodPicture: "images/Noodles/ND7.jpg",
+      FoodName: "Hanjuku Egg",
+      FoodPrice: 1.2,
     },
   ],
 
   //Sashimi
   [
     {
-      FoodPicture: "200.png",
-      FoodName: "Sashimi 1",
-      FoodPrice: 14.0,
+      FoodPicture: "images/Sashimi/SS1.jpg",
+      FoodName: "Premium Sashimi Platter",
+      FoodPrice: 20.2,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Sashimi 2",
-      FoodPrice: 4.2,
+      FoodPicture: "images/Sashimi/SS2.jpg",
+      FoodName: "Sashimi Platter",
+      FoodPrice: 16.2,
     },
 
     {
-      FoodPicture: "200.png",
-      FoodName: "Sashimi 3",
-      FoodPrice: 6.9,
+      FoodPicture: "images/Sashimi/SS3.jpg",
+      FoodName: "Salmon Sashimi",
+      FoodPrice: 6.2,
+    },
+
+    {
+      FoodPicture: "images/Sashimi/SS4.jpg",
+      FoodName: "Salmon Belly Sashimi",
+      FoodPrice: 8.0,
+    },
+
+    {
+      FoodPicture: "images/Sashimi/SS5.jpg",
+      FoodName: "Hotate Sashimi",
+      FoodPrice: 6.2,
+    },
+
+    {
+      FoodPicture: "images/Sashimi/SS6.jpg",
+      FoodName: "Akaebi Sashimi",
+      FoodPrice: 6.2,
+    },
+
+    {
+      FoodPicture: "images/Sashimi/SS7.jpg",
+      FoodName: "Maguro Sashimi",
+      FoodPrice: 6.2,
+    },
+
+    {
+      FoodPicture: "images/Sashimi/SS8.jpg",
+      FoodName: "Hamachi Sashimi",
+      FoodPrice: 8.2,
+    },
+
+    {
+      FoodPicture: "images/Sashimi/SS9.jpg",
+      FoodName: "Kajiki Sashimi",
+      FoodPrice: 6.2,
+    },
+
+    {
+      FoodPicture: "images/Sashimi/SS10.jpg",
+      FoodName: "Amaebi Sashimi",
+      FoodPrice: 6.2,
     },
   ],
 
-  //Ngiri Sushi
+  //Nigiri Sushi
   [
     {
       FoodPicture: "200.png",
-      FoodName: "Ngiri Sushi 1",
-      FoodPrice: 14.0,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
 
     {
       FoodPicture: "200.png",
-      FoodName: "Ngiri Sushi 2",
-      FoodPrice: 4.2,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Ngiri Sushi 3",
-      FoodPrice: 6.9,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
   ],
 
@@ -267,20 +279,14 @@ let AllFoodList = [
   [
     {
       FoodPicture: "200.png",
-      FoodName: "Aburi Sushi 1",
-      FoodPrice: 14.0,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
 
     {
       FoodPicture: "200.png",
-      FoodName: "Aburi Sushi 2",
-      FoodPrice: 4.2,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Aburi Sushi 3",
-      FoodPrice: 6.9,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
   ],
 
@@ -288,20 +294,14 @@ let AllFoodList = [
   [
     {
       FoodPicture: "200.png",
-      FoodName: "Gunkan 1",
-      FoodPrice: 14.0,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
 
     {
       FoodPicture: "200.png",
-      FoodName: "Gunkan 2",
-      FoodPrice: 4.2,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Gunkan 3",
-      FoodPrice: 6.9,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
   ],
 
@@ -309,20 +309,14 @@ let AllFoodList = [
   [
     {
       FoodPicture: "200.png",
-      FoodName: "Temaki 1",
-      FoodPrice: 14.0,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
 
     {
       FoodPicture: "200.png",
-      FoodName: "Temaki 2",
-      FoodPrice: 4.2,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Temaki 3",
-      FoodPrice: 6.9,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
   ],
 
@@ -330,20 +324,14 @@ let AllFoodList = [
   [
     {
       FoodPicture: "200.png",
-      FoodName: "Makimono 1",
-      FoodPrice: 14.0,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
 
     {
       FoodPicture: "200.png",
-      FoodName: "Makimono 2",
-      FoodPrice: 4.2,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Makimono 3",
-      FoodPrice: 6.9,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
   ],
 
@@ -351,41 +339,29 @@ let AllFoodList = [
   [
     {
       FoodPicture: "200.png",
-      FoodName: "Sides 1",
-      FoodPrice: 14.0,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
 
     {
       FoodPicture: "200.png",
-      FoodName: "Sides 2",
-      FoodPrice: 4.2,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Sides 3",
-      FoodPrice: 6.9,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
   ],
 
-  //Appetizer
+  //Appetizers
   [
     {
       FoodPicture: "200.png",
-      FoodName: "Appetizer 1",
-      FoodPrice: 14.0,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
 
     {
       FoodPicture: "200.png",
-      FoodName: "Appetizer 2",
-      FoodPrice: 4.2,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Appetizer 3",
-      FoodPrice: 6.9,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
   ],
 
@@ -393,20 +369,14 @@ let AllFoodList = [
   [
     {
       FoodPicture: "200.png",
-      FoodName: "Beverages 1",
-      FoodPrice: 14.0,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
 
     {
       FoodPicture: "200.png",
-      FoodName: "Beverages 2",
-      FoodPrice: 4.2,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Beverages 3",
-      FoodPrice: 6.9,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
   ],
 
@@ -414,20 +384,14 @@ let AllFoodList = [
   [
     {
       FoodPicture: "200.png",
-      FoodName: "Desert 1",
-      FoodPrice: 14.0,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
 
     {
       FoodPicture: "200.png",
-      FoodName: "Desert 2",
-      FoodPrice: 4.2,
-    },
-
-    {
-      FoodPicture: "200.png",
-      FoodName: "Desert 3",
-      FoodPrice: 6.9,
+      FoodName: "ASD",
+      FoodPrice: 7.9,
     },
   ],
 ];

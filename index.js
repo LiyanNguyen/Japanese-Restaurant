@@ -26,7 +26,7 @@ function renderFoodMenu() {
 	for (let i = 0; i < foodMenu.length; i++) {
 		foodMenuMarkup += `
 		<li class="list-group-item d-flex justify-content-between align-items-start">
-				<img class="rounded img-fluid me-3" src=${foodMenu[i].MenuPicture}>
+				<img class="rounded img-fluid me-3" src=${foodMenu[i].MenuPicture} width="100" height="100">
 				<div class="me-auto">
 					<div id="foodMenuOption${i}" class="fw-bold text-black" onclick="renderFoodList(${i})">${foodMenu[i].MenuName} <i class="fas fa-angle-right"></i></div>
 				</div>
@@ -56,7 +56,7 @@ function renderFoodList(foodListIndex1) {
 		<div class="card">
 			<div class="card-body">
 				<h5 class="card-title text-center">${AllFoodList[foodListIndex1][i].FoodName}</h5>
-				<img src=${AllFoodList[foodListIndex1][i].FoodPicture} class="rounded img-fluid mx-auto d-block">
+				<img src="${AllFoodList[foodListIndex1][i].FoodPicture}" class="rounded img-fluid mx-auto d-block" width="200" height="200">
 				<p class="text-center my-3">$ ${AllFoodList[foodListIndex1][i].FoodPrice.toFixed(2)}</p>
 				<div class="hstack gap-2 my-3">
 					<button class="btn btn-primary" onclick="if(OrderAmount${i}.value > 0){OrderAmount${i}.value--; removeFromOrder(${foodListIndex1},${i});}"><i class="fas fa-minus"></i></button>
