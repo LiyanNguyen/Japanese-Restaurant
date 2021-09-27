@@ -42,55 +42,55 @@ let foodMenu = [
   },
 
   {
-    MenuPicture: "200.png",
+    MenuPicture: AllFoodList[7][0].FoodPicture,
     MenuName: "Nigiri Sushi",
     AmountOfFood: AllFoodList[7].length,
   },
 
   {
-    MenuPicture: "200.png",
+    MenuPicture: AllFoodList[8][0].FoodPicture,
     MenuName: "Aburi Sushi",
     AmountOfFood: AllFoodList[8].length,
   },
 
   {
-    MenuPicture: "200.png",
+    MenuPicture: AllFoodList[9][0].FoodPicture,
     MenuName: "Gunkan",
     AmountOfFood: AllFoodList[9].length,
   },
 
   {
-    MenuPicture: "200.png",
+    MenuPicture: AllFoodList[10][0].FoodPicture,
     MenuName: "Temaki",
     AmountOfFood: AllFoodList[10].length,
   },
 
   {
-    MenuPicture: "200.png",
+    MenuPicture: AllFoodList[11][0].FoodPicture,
     MenuName: "Makimono",
     AmountOfFood: AllFoodList[11].length,
   },
 
   {
-    MenuPicture: "200.png",
+    MenuPicture: AllFoodList[12][0].FoodPicture,
     MenuName: "Sides",
     AmountOfFood: AllFoodList[12].length,
   },
 
   {
-    MenuPicture: "200.png",
+    MenuPicture: AllFoodList[13][0].FoodPicture,
     MenuName: "Appetizers",
     AmountOfFood: AllFoodList[13].length,
   },
 
   {
-    MenuPicture: "200.png",
+    MenuPicture: AllFoodList[14][0].FoodPicture,
     MenuName: "Beverages",
     AmountOfFood: AllFoodList[14].length,
   },
 
   {
-    MenuPicture: "200.png",
+    MenuPicture: AllFoodList[15][1].FoodPicture,
     MenuName: "Desert",
     AmountOfFood: AllFoodList[15].length,
   },

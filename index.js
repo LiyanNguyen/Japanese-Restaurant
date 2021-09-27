@@ -13,7 +13,7 @@ function renderTopNavBar() {
 	<nav class="navbar fixed-top navbar-dark navy-blue">
 		<div class="container-fluid">
 			<a type="button" class="btn text-white" onclick="renderFoodMenu()"><i class="fas fa-utensils"></i> Menu</a>
-			<a type="button" class="btn text-white" onclick="renderOrders()"><i class="fas fa-shopping-cart"></i> Orders <span class="badge bg-success">${CartAmount}</span></a>
+			<a type="button" class="btn text-white" onclick="renderOrders()"><i class="fas fa-shopping-cart"></i> Orders <span id="cart-button" class="badge bg-success">${CartAmount}</span></a>
 		</div>
 	</nav>`;
 }
@@ -26,11 +26,11 @@ function renderFoodMenu() {
 	for (let i = 0; i < foodMenu.length; i++) {
 		foodMenuMarkup += `
 		<li class="list-group-item d-flex justify-content-between align-items-start">
-				<img class="rounded img-fluid me-3" src=${foodMenu[i].MenuPicture} width="100" height="100">
-				<div class="me-auto">
-					<div id="foodMenuOption${i}" class="fw-bold text-black" onclick="renderFoodList(${i})">${foodMenu[i].MenuName} <i class="fas fa-angle-right"></i></div>
+				<img class="rounded img-fluid me-3" src=${foodMenu[i].MenuPicture} width="100" height="100" onclick="renderFoodList(${i})">
+				<div class="me-auto my-auto ms-3">
+					<div id="foodMenuOption${i}" class="fw-bold text-black" onclick="renderFoodList(${i})">${foodMenu[i].MenuName}</div>
 				</div>
-				<span class="badge bg-primary">${foodMenu[i].AmountOfFood}</span>
+				<h6 class="my-auto"><span class="badge else-blue">${foodMenu[i].AmountOfFood}</span></h6>
 			</li>`;
 	}
 
@@ -46,6 +46,7 @@ function renderFoodMenu() {
 
 
 function renderFoodList(foodListIndex1) {
+	window.scrollTo(0, 0);
 	mainContentElement.innerHTML = ``;
 	let foodListMarkup = ``;
 	
@@ -79,6 +80,9 @@ function addToOrder(foodListIndex1, foodListIndex2) {
 	//update UI
 	CartAmount++;
 	renderTopNavBar();
+	document
+		.querySelector("#cart-button")
+		.classList.add("animate__animated", "animate__heartBeat");
 	//add the selected food object into current order
 	currentOrders.push(AllFoodList[foodListIndex1][foodListIndex2]);
 }
@@ -87,6 +91,9 @@ function removeFromOrder(foodListIndex1, foodListIndex2) {
 	//update UI
 	CartAmount--;
 	renderTopNavBar();
+	document
+		.querySelector("#cart-button")
+		.classList.add("animate__animated", "animate__heartBeat");
 	//find the index of the selected food object
 	let objectToRemove = currentOrders.indexOf(AllFoodList[foodListIndex1][foodListIndex2]);
 	//remove the selected food object into current order
@@ -147,7 +154,7 @@ function renderOrders() {
 		<!--Bottom navbar-->
 		<nav class="navbar fixed-bottom navbar-light snow-white mt-5 else-blue">
 			<div class="container-fluid">
-				<button type="button" class="btn btn-success d-block mx-auto">Confirm Order</button>
+				<button type="button" class="animate__animated animate__pulse animate__infinite	infinite btn btn-lg btn-success d-block mx-auto" onclick="OrderHasBeenReceived()">Confirm Order</button>
 			</div>
 		</nav>`;
 	}
@@ -170,5 +177,23 @@ function removeFromOrderTable(currentOrderIndex) {
 	CartAmount--;
 	currentOrders.splice(currentOrderIndex, 1);
 	renderTopNavBar();
+	document
+		.querySelector("#cart-button")
+		.classList.add("animate__animated", "animate__heartBeat");
 	renderOrders();
 }
+
+function OrderHasBeenReceived() {
+	CartAmount = 0;
+	currentOrders = [];
+	renderTopNavBar();
+	mainContentElement.innerHTML = `
+	<div class="row me-2 ms-2 g-3 my-0">
+		<div class="card">
+			<div class="card-body">
+				<div class="card-text text-center lead text-success fw-bold animate__animated animate__fadeIn">Your order has been received!</div>
+				<div class="card-text text-center animate__animated animate__fadeIn animate__delay-1s">Please wait while we are preparing your food. 😊</div>
+			</div>
+		</div>
+	</div>`;
+ }
