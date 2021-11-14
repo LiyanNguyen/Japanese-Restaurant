@@ -1,6 +1,9 @@
 # Japanese Restaurant
 
-This is an online ordering platform, built using HTML, Bootstrap, Vanilla JS - following modern JS frameworks standard of using components, reactivity, and data binding
+This is an online ordering platform for mobile phones, built using HTML, Bootstrap, Vanilla JS - following modern JS frameworks standard of using components, reactivity, and data binding
+
+Demo:
+https://liyannguyen.github.io/Japanese-Restaurant/
 
 
 ![image](https://user-images.githubusercontent.com/50958126/134956732-d4b6db5e-4f3f-4baa-a866-98c9fdd81b2c.png)
