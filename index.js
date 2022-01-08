@@ -54,19 +54,20 @@ function renderFoodList(foodListIndex1) {
 	for (let i = 0; i < AllFoodList[foodListIndex1].length; i++) {
 		foodListMarkup += `
 		<div class="col-6">
-		<div class="card">
-			<div class="card-body">
-				<h5 class="card-title text-center">${AllFoodList[foodListIndex1][i].FoodName}</h5>
-				<img src="${AllFoodList[foodListIndex1][i].FoodPicture}" class="rounded img-fluid mx-auto d-block" width="200" height="200">
-				<p class="text-center my-3">$ ${AllFoodList[foodListIndex1][i].FoodPrice.toFixed(2)}</p>
-				<div class="hstack gap-2 my-3">
-					<button class="btn btn-primary" onclick="if(OrderAmount${i}.value > 0){OrderAmount${i}.value--; removeFromOrder(${foodListIndex1},${i});}"><i class="fas fa-minus"></i></button>
-					<input id="OrderAmount${i}" class="form-control" type="number" disabled placeholder="0">
-					<button class="btn btn-primary" onclick="OrderAmount${i}.value++; addToOrder(${foodListIndex1},${i})"><i class="fas fa-plus"></i></button>
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title text-center">${AllFoodList[foodListIndex1][i].FoodName}</h5>
+					<img src="${AllFoodList[foodListIndex1][i].FoodPicture}" class="rounded img-fluid mx-auto d-block" width="200" height="200">
+					<p class="text-center my-3">$ ${AllFoodList[foodListIndex1][i].FoodPrice.toFixed(2)}</p>
+					<div class="hstack gap-2 my-3">
+						<button class="btn sky-blue" onclick="if(OrderAmount${i}.value > 0){OrderAmount${i}.value--;}"><i class="fas fa-minus"></i></button>
+						<input id="OrderAmount${i}" class="form-control text-center" type="number" disabled placeholder="0">
+						<button class="btn sky-blue" onclick="OrderAmount${i}.value++;"><i class="fas fa-plus"></i></button>
+					</div>
+					<button id="AddToOrderButton${i}" class="btn btn-primary col-12" onclick="addToOrder(${foodListIndex1},${i}, OrderAmount${i}.value); OrderAmount${i}.value = 0;">Add to Order</button>
 				</div>
 			</div>
-		</div>
-	</div>`;
+		</div>`;
 	}
 
 	//render the full markup inside main
@@ -76,15 +77,23 @@ function renderFoodList(foodListIndex1) {
 	</div>`;
 }
 
-function addToOrder(foodListIndex1, foodListIndex2) {
-	//update UI
-	CartAmount++;
-	renderTopNavBar();
-	document
-		.querySelector("#cart-button")
-		.classList.add("animate__animated", "animate__heartBeat");
-	//add the selected food object into current order
-	currentOrders.push(AllFoodList[foodListIndex1][foodListIndex2]);
+function addToOrder(foodListIndex1, foodListIndex2, quantity) {
+	if (quantity > 0) {
+		//update UI
+		CartAmount++;
+		renderTopNavBar();
+		document
+			.querySelector("#cart-button")
+			.classList.add("animate__animated", "animate__heartBeat");
+		
+		//add the selected food object into current order
+		currentOrders.push({
+			ItemName: AllFoodList[foodListIndex1][foodListIndex2].FoodName,
+			ItemQuantity: quantity,
+			ItemPrice:
+				AllFoodList[foodListIndex1][foodListIndex2].FoodPrice * quantity,
+		});
+	}
 }
 
 function removeFromOrder(foodListIndex1, foodListIndex2) {
@@ -107,15 +116,17 @@ function renderOrders() {
 	if (currentOrders.length > 0) {
 		//calculate the order total
 		let orderTotal = currentOrders.reduce((currentTotal, currentItem) => {
-			return currentItem.FoodPrice + currentTotal;
+			return currentItem.ItemPrice + currentTotal;
 		}, 0);
 
 		//create the markup for order table
 		for (let i = 0; i < currentOrders.length; i++) {
 			foodOrderMarkup += `
 			<tr>
-				<td>${currentOrders[i].FoodName}</td>
-				<td>$${currentOrders[i].FoodPrice.toFixed(2)}</td>
+				<td>#${i + 1}</td>
+				<td>${currentOrders[i].ItemName}</td>
+				<td>x${currentOrders[i].ItemQuantity}</td>
+				<td>$${currentOrders[i].ItemPrice.toFixed(2)}</td>
 				<td><button type="button" class="btn-close" onclick="removeFromOrderTable(${i})"></button></td>
 			</tr>`;
 		}
@@ -129,7 +140,9 @@ function renderOrders() {
 						<table class="table">
 							<thead>
 								<tr>
+									<th scope="col">Order</th>
 									<th scope="col">Item</th>
+									<th scope="col">Quantity</th>
 									<th scope="col">Price</th>
 									<th scope="col"></th>
 								</tr>
@@ -138,7 +151,7 @@ function renderOrders() {
 								${foodOrderMarkup}
 							</tbody>
 							<tfoot class="my-4">
-								<th>Order Total</th>
+								<th colspan="3">Order Total</th>
 								<td>$${orderTotal.toFixed(2)}</td>
 								<td></td>
 							</tfoot>
@@ -154,7 +167,7 @@ function renderOrders() {
 		<!--Bottom navbar-->
 		<nav class="navbar fixed-bottom navbar-light snow-white mt-5 else-blue">
 			<div class="container-fluid">
-				<button type="button" class="animate__animated animate__pulse animate__infinite	infinite btn btn-lg btn-success d-block mx-auto" onclick="OrderHasBeenReceived()">Confirm Order</button>
+				<button type="button" class="animate__animated animate__pulse animate__infinite	infinite btn btn-lg btn-success d-block mx-auto" onclick="ConfirmFoodOrder()">Confirm Order</button>
 			</div>
 		</nav>`;
 	}
@@ -183,7 +196,7 @@ function removeFromOrderTable(currentOrderIndex) {
 	renderOrders();
 }
 
-function OrderHasBeenReceived() {
+function ConfirmFoodOrder() {
 	CartAmount = 0;
 	currentOrders = [];
 	renderTopNavBar();
