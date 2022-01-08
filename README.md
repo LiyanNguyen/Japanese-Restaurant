@@ -6,8 +6,7 @@ Demo:
 https://liyannguyen.github.io/Japanese-Restaurant/
 
 
-![image](https://user-images.githubusercontent.com/50958126/134956732-d4b6db5e-4f3f-4baa-a866-98c9fdd81b2c.png)
-![image](https://user-images.githubusercontent.com/50958126/134956963-2658c3ba-cd2a-438f-8906-932ecba543c3.png)
-![image](https://user-images.githubusercontent.com/50958126/134956976-fbcd1c0f-882b-4c59-9b10-b6c78d072e16.png)
-![image](https://user-images.githubusercontent.com/50958126/134957521-7be1c74f-a709-4ff6-a440-bb5b82814b7a.png)
-
+![image](https://user-images.githubusercontent.com/50958126/148638660-7953a0a8-2e4c-4fdc-8062-4b400356d640.png)
+![11](https://user-images.githubusercontent.com/50958126/148638627-01b36678-d65d-4909-a7b1-a8f2d010d110.png)
+![22](https://user-images.githubusercontent.com/50958126/148638630-2a675aff-bc3a-4106-a71c-a4a0e699afdc.png)
+![image](https://user-images.githubusercontent.com/50958126/148638702-0ca6a3aa-4b59-4135-a567-ac0477d74b85.png)
